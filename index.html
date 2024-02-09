@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form id="search-form">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Enter a location name"
+          pattern="[a-zA-Z]+"
+          title="Please enter a name in Latin characters"
+        />
+        <button
+          type="submit"
+          id="search-button"
+          class="search-button"
+          title="Find"
+        >
+          <img id="search-img" src="./imgs/search.png" />
+        </button>
+      </form>
+      <div class="menu">
+        <div class="left-side">
+          <div id="location">
+            <div id="location-name"></div>
+            <button
+              type="submit"
+              id="add-to-favorites"
+              class="add-to-favorites"
+              title="Add to favorites"
+            >
+              <img id="shape-img" src="./imgs/shape.png" />
+            </button>
+          </div>
+          <div id="degrees-weather-img">
+            <div id="degrees"></div>
+            <div id="weather-img"></div>
+          </div>
+          <div id="details">
+            <ul>
+              <li>Feels like: <span id="feels-like"></span></li>
+              <li>Sunrise: <span id="sunrise"></span></li>
+              <li>Sunset: <span id="sunset"></span></li>
+            </ul>
+          </div>
+          <div class="long__term">
+            <p id="time-3hr"></p>
+            <div class="long__term__data">
+              <ul>
+                <li class="temperature">Temperature: <span id="temp-3hr"></span></li>
+                <li class="feels__like">Feels like: <span id="feels-3hr"></span></li>
+              </ul>
+              <div id="long-term-3hr-img"></div>
+            </div>
+          </div>
+          <div class="long__term">
+            <p id="time-6hr"></p>
+            <div class="long__term__data">
+              <ul>
+                <li class="temperature">Temperature: <span id="temp-6hr"></span></li>
+                <li class="feels__like">Feels like: <span id="feels-6hr"></span></li>
+              </ul>
+              <div id="long-term-6hr-img"></div>
+            </div>
+          </div>
+          <div class="long__term">
+            <p id="time-9hr"></p>
+            <div class="long__term__data" id="long-term-last">
+              <ul>
+                <li class="temperature">Temperature: <span id="temp-9hr"></span></li>
+                <li class="feels__like">Feels like: <span id="feels-9hr"></span></li>
+              </ul>
+              <div id="long-term-9hr-img"></div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div id="added-locations">
+            <p>Added locations:</p>
+          </div>
+          <div id="list-location">
+            <ul id="favorite-locations" class="favorite-locations"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
